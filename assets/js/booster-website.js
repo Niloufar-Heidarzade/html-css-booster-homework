@@ -62,6 +62,8 @@ section2Para.innerText = "Never let location be an issue when accessing your fil
 const section2Para2 = document.createElement("p");
 section2Para2.classList.add("section2Para2");
 section2Para2.innerText = "Securely share files and folders with friends, family and colleagues for live collaboration. No email attachments required!";
+const section2LinkContainer = document.createElement("div");
+section2LinkContainer.classList.add("section2LinkContainer");
 const section2Link = document.createElement("a");
 section2Link.classList.add("section2Link");
 section2Link.innerText = "See how Fylo works ";
@@ -71,9 +73,9 @@ arrowIcon.classList.add("arrowIcon");
 arrowIcon.src = "./assets/images/icon-arrow.svg";
 const reviewBox =document.createElement("div");
 reviewBox.classList.add("reviewBox");
-const qoutationMark = document.createElement("h1");
+const qoutationMark = document.createElement("img");
 qoutationMark.classList.add("qoutationMark");
-qoutationMark.innerText = "“";
+qoutationMark.src = "./assets/images/icon-quotes.svg"
 const reviewPara = document.createElement("p");
 reviewPara.classList.add("reviewPara");
 reviewPara.innerText = "Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.";
@@ -132,12 +134,38 @@ phoneIcon.src = "./assets/images/icon-phone.svg";
 const phoneNumber = document.createElement("p");
 phoneNumber.innerText = "phone: +1-543-123-4567";
 const column1Row2 = document.createElement("div");
+column1Row2.classList.add("column1Row2");
+const gmailIcon = document.createElement("img");
+gmailIcon.src = "./assets/images/icon-email.svg";
+const gmail = document.createElement("p");
+gmail.innerText = "example@Fylo.com";
+const column2 = document.createElement("div");
+column2.classList.add("column2");
+const column2row1 = document.createElement("button");
+column2row1.innerText = "About Us";
+const column2row2 = document.createElement("button");
+column2row2.innerText = "Jobs";
+const column2row3 = document.createElement("button");
+column2row3.innerText = "Press";
+const column2row4 = document.createElement("button");
+column2row4.innerText = "Blog";
+const column3 = document.createElement("div");
+column3.classList.add("column3");
+const column3row1 = document.createElement("button");
+column3row1.innerText= "Contact Us";
+const column3row2 = document.createElement("button");
+column3row2.innerText = "Terms";
+const column3row3 = document.createElement("button");
+column3row3.innerText = "Privacy";
 
 
 //append elements
+column3.append(column3row1, column3row2, column3row3)
+column2.append(column2row1, column2row2, column2row3, column2row4);
+column1Row2.append(gmailIcon, gmail);
 column1Row1.append(phoneIcon, phoneNumber);
-column1.append(column1Row1);
-footerContainer.append(column1);
+column1.append(column1Row1, column1Row2);
+footerContainer.append(column1, column2, column3);
 footerElement.append(footerLogo, footerContainer);
 section3secondPart.append(section3Input, section3Button);
 section3FirstPart.append(section3Heading, section3Para);
@@ -145,8 +173,8 @@ section3.append(section3FirstPart, section3secondPart);
 profileInfo.append(userName, userRole)
 profile.append(profilePic, profileInfo);
 reviewBox.append(qoutationMark, reviewPara, profile);
-section2Link.append(arrowIcon);
-firstPartsection2.append(section2Heading, section2Para, section2Para2, section2Link, reviewBox);
+section2LinkContainer.append(section2Link, arrowIcon)
+firstPartsection2.append(section2Heading, section2Para, section2Para2, section2LinkContainer, reviewBox);
 section2.append(firstPartsection2, section2Image);
 Section1InputBar.append(Section1InputEle, Section1Button);
 firstPartSection1.append(Section1Heading, Section1Para, Section1InputBar);
