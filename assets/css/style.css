@@ -1,10 +1,141 @@
-* {
-  margin: 0px;
-  box-sizing: border-box;
-}
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* css variables */
 :root {
+  /* primary colors */
   --Very-Dark-Blue: hsl(243, 87%, 12%);
   --Desaturated-Blue: hsl(238, 22%, 44%);
+  /* accent colors */
   --Bright-Blue: hsl(224, 93%, 58%);
   --Moderate0-Cyan: hsl(170, 45%, 43%);
+  /* neutral colors */
+  --Light-Grayish-Blue: hsl(240, 75%, 98%);
+  --Light-Gray: hsl(0, 0%, 75%);
+  /* body font */
+  --body-font: "Open Sans";
+  /* headings font */
+  --headings-font: "Raleway";
+}
+
+/* reset css */
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--body-font);
+  font-size: 16px;
+}
+h1,h2,h3,h4,h5,h6 {
+  font-family: var(--headings-font);
+}
+/* reset css ends */
+
+/* navbar starts */
+.headerElement {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+.navbar {
+  display:flex;
+  justify-content: space-between;
+  gap:35px;
+}
+.navbarBtn {
+  background-color: white;
+  border: none;
+  color: var(--Very-Dark-Blue);
+  font-weight: 400;
+}
+/* navbar ends */
+
+/* section 1 starts */
+.section1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 60px 100px 60px;
+}
+.firstPartSection1 {
+  width: 45%;
+}
+.section1Image {
+  width: 45%;
+}
+.Section1Heading {
+  color: var(--Very-Dark-Blue);
+  font-size: 32px;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  line-height: 50px;
+}
+.Section1Para {
+  margin-top: 15px;
+  color: var(--Very-Dark-Blue)
+}
+.Section1InputBar {
+  margin-top: 25px;
+}
+.Section1InputEle {
+  width: 60%;
+  height: 38px;
+  padding-left: 15px;
+  margin-right: 5%;
+}
+.Section1InputEle::placeholder {
+  color: var(--Light-Gray);
+}
+.Section1Button {
+  width: 35%;
+  height: 38px;
+  border: none;
+  background-color: var(--Bright-Blue);
+  border-radius: 3px;
+  color: white;
+}
+
+/* section 1 ends */
+
+/* responsiveness */
+@media screen and (max-width : 500px) {
+  .headerElement {
+    padding: 25px;
+  }
+  .headerLogo {
+    width: 90px;
+  }
+  .navbar {
+    gap: 20px;
+  }
+  .navbarBtn {
+    font-size: 13px;
+  }
+  .section1 {
+    padding: 25px;
+  }
+}
+@media screen and (max-width: 700px) {
+  .section1 {
+    flex-direction: column-reverse;
+  }
+  .firstPartSection1 {
+    width: 100%;
+  }
+  .Section1Heading , .Section1Para {
+    text-align: center;
+  }
+  .Section1InputEle , .Section1Button {
+    display: block;
+    width: 100%;
+    margin-bottom:20px
+  }
+  .section1Image {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 100%;
+  }
 }
