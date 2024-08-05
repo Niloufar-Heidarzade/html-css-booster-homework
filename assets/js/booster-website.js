@@ -121,7 +121,7 @@ const footerElement = document.createElement("footer");
 footerElement.classList.add("footerElement");
 const footerLogo = document.createElement("img");
 footerLogo.classList.add("footerLogo");
-footerLogo.src = "./assets/images/logo.svg";
+footerLogo.src = "./assets/images/lightLogo.svg";
 const footerContainer = document.createElement("section");
 footerContainer.classList.add("footerContainer");
 const column1 = document.createElement("div");
@@ -142,22 +142,28 @@ gmail.innerText = "example@Fylo.com";
 const column2 = document.createElement("div");
 column2.classList.add("column2");
 const column2row1 = document.createElement("button");
+column2row1.classList.add("row");
 column2row1.innerText = "About Us";
 const column2row2 = document.createElement("button");
+column2row2.classList.add("row");
 column2row2.innerText = "Jobs";
 const column2row3 = document.createElement("button");
+column2row3.classList.add("row");
 column2row3.innerText = "Press";
 const column2row4 = document.createElement("button");
+column2row4.classList.add("row");
 column2row4.innerText = "Blog";
 const column3 = document.createElement("div");
 column3.classList.add("column3");
 const column3row1 = document.createElement("button");
+column3row1.classList.add("row");
 column3row1.innerText= "Contact Us";
 const column3row2 = document.createElement("button");
+column3row2.classList.add("row");
 column3row2.innerText = "Terms";
 const column3row3 = document.createElement("button");
 column3row3.innerText = "Privacy";
-
+column3row3.classList.add("row");
 
 //append elements
 column3.append(column3row1, column3row2, column3row3)

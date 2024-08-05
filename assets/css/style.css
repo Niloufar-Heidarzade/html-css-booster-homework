@@ -229,7 +229,39 @@ h1,h2,h3,h4,h5,h6 {
 /* section3 ends */
 
 /* footer starts */
-.
+.footerElement {
+  background-color: var(--Very-Dark-Blue);
+  padding: 100px 60px 100px 60px;
+}
+.footerLogo {
+  color: var(--Light-Gray)
+}
+.footerContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+.column1, .column2, .column3{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  
+}
+.column1Row1 {
+  color: var(--Light-Grayish-Blue);
+  display:flex;
+  gap:15px;
+}
+.column1Row2{
+  color: var(--Light-Grayish-Blue);
+  display: flex;
+  gap:15px;
+}
+.row{
+  color: var(--Light-Grayish-Blue);
+  background-color: var(--Very-Dark-Blue);
+  border: none;
+}
 /* footer ends */
 
 /* responsiveness */
@@ -312,6 +344,11 @@ h1,h2,h3,h4,h5,h6 {
   }
   .section3Input , .section3Button {
     width:100%
+  }
+  .footerContainer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 50px;
   }
 }
 @media screen and (max-width: 375px) {
